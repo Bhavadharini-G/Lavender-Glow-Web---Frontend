@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lavender Cosmetics</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+            background-image: linear-gradient(135deg, rgba(106, 76, 156, 0.8), rgba(183, 167, 204, 0.8)); 
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        header {
+            background-color: rgba(106, 76, 156, 0.8);
+            padding: 20px 0;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        nav .logo {
+            font-size: 28px;
+            color: white;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 30px;
+        }
+
+        nav ul li {
+            margin: 0;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #ffccff;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Hero Section */
+        .hero {
+            color: white;
+            height: 80vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 20px;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        .hero h1 {
+            font-size: 50px;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 24px;
+            margin-bottom: 30px;
+        }
+
+        .cta-btn {
+            background-color: #6a4c9c;
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            font-size: 18px;
+            border-radius: 25px;
+            transition: background-color 0.3s ease;
+        }
+
+        .cta-btn:hover {
+            background-color: #5a3a7c;
+        }
+
+        /* Section Styling */
+        .section {
+            padding: 50px 20px;
+            text-align: center;
+            background-color: #fff;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        .section h2 {
+            font-size: 36px;
+            margin-bottom: 30px;
+            color: #6a4c9c;
+        }
+
+        /* Services Section */
+        .services-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+            justify-content: center;
+        }
+
+        .service-card {
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+        }
+
+        .service-card h3 {
+            font-size: 24px;
+            color: #6a4c9c;
+            margin-bottom: 15px;
+        }
+
+        .service-card p {
+            color: #777;
+        }
+
+        /* Testimonial Section */
+        .testimonial-section {
+            background-color: #eaeaea;
+            padding: 50px 20px;
+        }
+
+        .testimonial {
+            font-style: italic;
+            margin: 20px 0;
+            color: #555;
+        }
+
+        .testimonial-author {
+            font-weight: bold;
+            color: #6a4c9c;
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            background-color: #f9f9f9;
+            padding: 50px 20px;
+        }
+
+        .faq-item {
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .faq-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .faq-question {
+            font-weight: bold;
+            color: #6a4c9c;
+        }
+
+        .faq-answer {
+            margin-top: 10px;
+            color: #777;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #6a4c9c;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        /* Media Queries */
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                gap: 10px;
+                align-items: center;
+            }
+
+            .services-container {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .service-card {
+                padding: 20px;
+            }
+
+            .hero h1 {
+                font-size: 36px;
+            }
+
+            .hero p {
+                font-size: 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .services-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <header>
+        <nav>
+            <div class="logo">Lavender Cosmetics</div>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#faq">FAQ</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Glow Naturally with Lavender</h1>
+            <p>Discover premium cosmetics for your natural beauty.</p>
+            <a href="#services" class="cta-btn">Explore Our Products</a>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="section">
+        <h2>Our Services</h2>
+        <div class="services-container">
+            <div class="service-card">
+                <h3>Personalized Skincare</h3>
+                <p>We offer skincare consultations to create a custom skincare routine tailored to your needs.</p>
+            </div>
+            <div class="service-card">
+                <h3>Herbal Cosmetics</h3>
+                <p>Our products are made from all-natural ingredients, offering you the purest skincare experience.</p>
+            </div>
+            <div class="service-card">
+                <h3>Beauty Workshops</h3>
+                <p>Join our workshops to learn about skincare, cosmetics, and holistic beauty techniques.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonial Section -->
+    <section id="testimonials" class="testimonial-section">
+        <h2>What Our Customers Say</h2>
+        <div class="testimonial">
+            <p>"I have been using Lavender Cosmetics for months, and my skin has never looked better!"</p>
+            <p class="testimonial-author">- Emily R.</p>
+        </div>
+        <div class="testimonial">
+            <p>"The lavender body lotion is my absolute favorite! So calming and smooth."</p>
+            <p class="testimonial-author">- Jessica L.</p>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="faq-section">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-item">
+            <div class="faq-question">What skin types do your products work for?</div>
+            <div class="faq-answer">Our products are suitable for all skin types, including sensitive skin.</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">Are your products vegan?</div>
+            <div class="faq-answer">Yes, all our products are 100% vegan and cruelty-free.</div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <h2>Contact Us</h2>
+        <form id="contact-form">
+            <input type="text" id="name" placeholder="Your Name" required>
+            <input type="email" id="email" placeholder="Your Email" required>
+            <textarea id="message" placeholder="Your Message" required></textarea>
+            <button type="submit" class="cta-btn">Send Message</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Lavender Cosmetics. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        // JavaScript code for form submission
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert("Thank you for your message! We will get back to you soon.");
+        });
+    </script>
+</body>
+</html>
