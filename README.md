@@ -1,4 +1,4 @@
-# Lavender-Glow-Web---Frontend
+# Customized Website Creation
 Lavender Glow is a cosmetic website dedicated to promoting high-quality skincare products and services. The focus of this project is on frontend development, creating a visually appealing and user-friendly website to showcase the brand's offerings. Designed with a modern and elegant aesthetic, the site aims to provide a seamless experience for users to explore Lavender Glow's products and services.
 ## Overview
 Lavender Glow offers a range of natural skincare solutions, including personalized skincare routines, herbal cosmetics, and beauty workshops. This frontend project aims to bring these services to life with a visually stunning, responsive website. With a focus on clarity, ease of navigation, and aesthetic appeal, the site features several key sections including a hero section, service descriptions, customer testimonials, frequently asked questions, and a contact form.
